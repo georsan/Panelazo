@@ -13,22 +13,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.Panelazo.Panelazo.Modelo.user;
+import com.Panelazo.Panelazo.Dao.ordenDao;
 import com.Panelazo.Panelazo.Dao.usuarioDao;
 import com.Panelazo.Panelazo.Modelo.usuario;
 
 @RestController
-public class usuarioController {
+public class ordenController {
 	@Autowired
-	private usuarioDao usuariodao;
-	@RequestMapping(value = "getuser", method = RequestMethod.GET)
-	public List<usuario> usuario() {
-		return usuariodao.user();
+	private ordenDao ordendao;
+	@RequestMapping(value = "getorden", method = RequestMethod.GET)
+	public List<com.Panelazo.Panelazo.Modelo.orden> orden() {
+		return ordendao.orden();
 	}
 		
-	@PostMapping("/registrarUser")
-	public String registrarUsuario(@RequestBody usuario user) {
+	@PostMapping("/neworden")
+	public String registrarUsuario(@RequestBody com.Panelazo.Panelazo.Modelo.orden orden) {
 		
-		usuariodao.saveUsuario(user);
+		ordendao.saveorden(orden);
 		return "Registrado con exito";
 	}
 	

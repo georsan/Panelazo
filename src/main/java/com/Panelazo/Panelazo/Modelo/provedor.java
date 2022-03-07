@@ -6,6 +6,8 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -16,6 +18,7 @@ import javax.persistence.Table;
 @Table(name = "provedor")
 public class provedor {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_provedor;
 	@Column(name="nombre",length = 60)
 	private String nombre;

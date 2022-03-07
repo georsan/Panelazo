@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -14,12 +16,13 @@ import javax.persistence.Table;
 @Table(name = "orden")
 public class orden {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_orden;
-	@ManyToOne()
-	@JoinColumn(name = "id_provedor")
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_provedor",referencedColumnName = "id_provedor")
 	private provedor provedor;
-	@ManyToOne()
-	@JoinColumn(name = "id_usuario")
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_usuario",referencedColumnName = "id_usuario")
 	private usuario user;
 	@Column(name="fecha",length = 60)
 	private String fecha;
