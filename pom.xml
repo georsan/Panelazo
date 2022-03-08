@@ -15,10 +15,7 @@
 	<name>Panelazo</name>
 	<description>This is panelazo.com a project for Software</description>
 	<properties>
-		<java.version>11</java.version>
 	
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
 	</properties>
 	
 	<dependencies>
