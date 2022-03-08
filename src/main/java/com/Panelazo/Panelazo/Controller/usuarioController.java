@@ -25,7 +25,7 @@ public class usuarioController {
 	public List<usuario> usuario() {
 		return usuariodao.user();
 	}
-	@CrossOrigin(origins = "https://panelazo7.herokuapp.com/")	
+
 	@PostMapping("/registrarUser")
 	public String registrarUsuario(@RequestBody usuario user) {
 			
