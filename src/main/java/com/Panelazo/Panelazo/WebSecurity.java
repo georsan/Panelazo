@@ -15,7 +15,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	    public void configure(HttpSecurity http) throws Exception {
 	        http.authorizeRequests()
 	            .antMatchers("/","/login","/registrarUser","/user/getuser","/getprovedor","/registrarproducto").permitAll();
-	        http.csrf().disable();
+	        http.csrf().disable().cors();
 
 	    }
 	  // BCryptPasswordEncoder bCryptPasswordEncoder;
