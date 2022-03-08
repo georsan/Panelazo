@@ -16,7 +16,7 @@ public class loginController {
 	private usuarioDao usuariodao;
 	//falta arreglar
 	@PostMapping("/login")
-	public usuario login(@RequestBody usuario user) {
+	public String login(@RequestBody usuario user) {
 		
 		return usuariodao.getuser(user);
 	}
