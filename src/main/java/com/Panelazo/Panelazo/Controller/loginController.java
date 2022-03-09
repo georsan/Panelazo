@@ -17,7 +17,6 @@ import com.Panelazo.Panelazo.Modelo.usuario;
 public class loginController {
 	@Autowired
 	private usuarioDao usuariodao;
-	//falta arreglar
 	@PostMapping("/login")
 	public String login(@RequestBody usuario user) {
 		

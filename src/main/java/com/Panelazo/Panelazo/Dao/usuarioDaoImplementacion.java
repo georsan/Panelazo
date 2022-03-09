@@ -29,16 +29,16 @@ public class usuarioDaoImplementacion implements usuarioDao{
 		entityManager.merge(usuario);
 	}
     @Override
-	public String getuser(usuario user){
+	public usuario getuser(usuario user){
 		String query="From usuario where email=:email";
 		List<usuario>lista=entityManager.createQuery(query).setParameter("email", user.getEmail()).getResultList();
 		
 		if(lista.isEmpty()) {
-			return "no";
+			return null;
 		}else {
 		if(lista.get(0).getContraseña().equals(user.getContraseña())) {
-		return "si";
-    }else {return "no";}
+		return user;
+    }else {return null;}
 		}
 
 }}
