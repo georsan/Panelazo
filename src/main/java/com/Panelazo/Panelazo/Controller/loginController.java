@@ -18,7 +18,7 @@ public class loginController {
 	@Autowired
 	private usuarioDao usuariodao;
 	@PostMapping("/login")
-	public usuario login(@RequestBody usuario user) {
+	public String login(@RequestBody usuario user) {
 		
 		return usuariodao.getuser(user);
 	}
