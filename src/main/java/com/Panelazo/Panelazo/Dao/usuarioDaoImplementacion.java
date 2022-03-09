@@ -35,10 +35,10 @@ public class usuarioDaoImplementacion implements usuarioDao{
 		
 		if(lista.isEmpty()) {
 			return "no";
-		}
+		}else {
 		if(lista.get(0).getContraseña().equals(user.getContraseña())) {
 		return "si";
-    }
-    return "no";
+    }else {return "no";}
+		}
 
 }}
