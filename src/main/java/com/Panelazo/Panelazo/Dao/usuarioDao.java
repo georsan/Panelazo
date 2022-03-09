@@ -8,7 +8,7 @@ import com.Panelazo.Panelazo.Modelo.usuario;
 public interface usuarioDao{
 	public 	List<usuario>user();
 	public void saveUsuario(usuario user);
-	public String getuser(usuario user);
+	usuario getuser(usuario user);
 
 
 }
