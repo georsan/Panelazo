@@ -37,7 +37,7 @@ public class usuarioDaoImplementacion implements usuarioDao{
 			return null;
 		}else {
 		if(lista.get(0).getContraseña().equals(user.getContraseña())) {
-		return user;
+		return lista.get(0);
     }else {return null;}
 		}
 
