@@ -28,19 +28,19 @@ public class productos {
 	private String unidad_de_medida;
 	@Column(name="linea_productos",length = 255)
 	private String linea_productos;
-    @ManyToMany(cascade = {
-            CascadeType.PERSIST,
-            CascadeType.MERGE
-    })	
-    @JoinTable(
-            name = "detalleorden",
-            joinColumns = {@JoinColumn(name = "id_productos")},
-            inverseJoinColumns = {@JoinColumn(name = "id_orden")}
-    )
-    private Set<orden> orden;
+   // @ManyToMany(cascade = {
+   //         CascadeType.PERSIST,
+   //         CascadeType.MERGE
+   // })	
+    //@JoinTable(
+     //       name = "detalleorden",
+      //      joinColumns = {@JoinColumn(name = "id_productos")},
+      //      inverseJoinColumns = {@JoinColumn(name = "id_orden")}
+    //)
+    //private Set<orden> orden;
 	
-    @ManyToMany(mappedBy = "productos")
-    private Set<provedor> provedor;
+    //@ManyToMany(mappedBy = "productos")
+    //private Set<provedor> provedor;
 	public Integer getId_productos() {
 		return id_productos;
 	}

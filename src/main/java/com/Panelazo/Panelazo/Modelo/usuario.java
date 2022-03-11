@@ -30,8 +30,8 @@ public class usuario {
 	private String direccion;
 	@Column(name="contraseña",length = 255)
 	private String contraseña;
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<orden>orden;
+	//@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+	//private List<orden>orden;
 	public Long getId_usuario() {
 		return id_usuario;
 	}
@@ -74,4 +74,5 @@ public class usuario {
 	public void setContraseña(String contraseña) {
 		this.contraseña = contraseña;
 	}
+	
 }

@@ -32,18 +32,16 @@ public class provedor {
 	private String contraseña;
 	@Column(name="rut",length = 200)
 	private String rut;
-	@OneToMany(mappedBy = "provedor", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<orden>orden;
-    @ManyToMany(cascade = {
-            CascadeType.PERSIST,
-            CascadeType.MERGE
-    })	
-    @JoinTable(
-            name = "abastecimiento",
-            joinColumns = {@JoinColumn(name = "id_provedor")},
-            inverseJoinColumns = {@JoinColumn(name = "id_productos")}
-    )
-    private Set<productos> productos;
+	//@OneToMany(mappedBy = "provedor", cascade = CascadeType.ALL, orphanRemoval = true)
+	//private List<orden>orden;
+    //@ManyToMany(cascade = {
+     //       CascadeType.PERSIST,
+      //      CascadeType.MERGE
+    //})	
+   ////       name = "abastecimiento",
+       //   inverseJoinColumns = {@JoinColumn(name = "id_productos")}
+    //)
+    //private Set<productos> productos;
 	public Integer getId_provedor() {
 		return id_provedor;
 	}
