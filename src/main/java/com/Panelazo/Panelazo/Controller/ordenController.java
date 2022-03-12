@@ -19,6 +19,7 @@ import com.Panelazo.Panelazo.Dao.usuarioDao;
 import com.Panelazo.Panelazo.Modelo.usuario;
 
 @RestController
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 public class ordenController {
 	@Autowired
 	private ordenDao ordendao;
